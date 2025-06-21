@@ -1,7 +1,14 @@
+import { FC } from 'react';
+import { ModalImg, Photo } from '../App/App.types';
 import ImageCard from '../ImageCard/ImageCard';
 import css from './ImageGallery.module.css';
 
-const ImageGallery = ({ images, openModal }) => {
+type ImageGalleryProps = {
+  images: Photo[];
+  openModal: (img: ModalImg) => void;
+};
+
+const ImageGallery = ({ images, openModal }: ImageGalleryProps) => {
   return (
     <ul className={css.galleryList}>
       {images.map((image) => (

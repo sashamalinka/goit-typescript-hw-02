@@ -1,9 +1,13 @@
 import { ScaleLoader } from 'react-spinners';
 
-const Loader = ({ loading }) => {
+type LoaderProps = {
+  loading: boolean;
+};
+
+const Loader = ({ loading }: LoaderProps) => {
   return (
     <ScaleLoader
-      color="#007bff"
+      color="#dda0dd"
       cssOverride={{
         display: 'flex',
         alignItems: 'center',
